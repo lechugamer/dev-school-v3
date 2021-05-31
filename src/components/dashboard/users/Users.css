@@ -1,0 +1,8 @@
+main {
+    background: var(--white);
+    grid-area: main;
+    overflow-y: auto;
+    padding: 20px 35px;
+
+  }
+  
