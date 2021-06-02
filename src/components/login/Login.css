@@ -1,9 +1,8 @@
 .container {
-    position: relative;
+    position: absolute;
 }
 
 .wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }

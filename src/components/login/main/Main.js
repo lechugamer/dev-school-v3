@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <div className="container-main">
             <img src= {logo}
-            width='50%'
+            width='70%'
             alt='logo'
             />
             <h1>

@@ -20,7 +20,7 @@ const DashboardScreen = () => {
       <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
       <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
         <Switch>
-          <Route path='/users' exact component={Users} />
+          <Route path='/dashboard' exact component={Dashboard} />
         </Switch>
     </div>
   );
