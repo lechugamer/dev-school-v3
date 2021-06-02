@@ -9,11 +9,8 @@ const Navbar = ({ sidebarOpen, openSidebar }) => {
       </div>
       
       <div className="navbar__right">
-        <a href="#">
-          <i className="fa fa-search" aria-hidden="true"></i>
-        </a>
         <a href="#!">
-          <img width="30" src={avatar} alt="avatar" />
+          <img width="40" src={avatar} alt="avatar" />
         </a>
       </div>
     </nav>

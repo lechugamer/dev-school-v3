@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Inputs from "../inputs/Inputs";
 import { Link } from "react-router-dom";
-import loginService from "../../../services/login";
+import Services from "../services/Services";
 
 function Form() {
   const [email, setEmail] = useState("");
@@ -13,7 +13,7 @@ function Form() {
     event.preventDefault();
 
     try {
-      const user = await loginService.login({
+      const user = await Services.login({
         email: "test1@test.com", 
         password: "contra123" 
       });
