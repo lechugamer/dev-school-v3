@@ -21,12 +21,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #51d398;
+  background: #3ea175;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #dd4a4a;
+  background: #a5aaad;
 }
 
 * {
@@ -39,10 +39,10 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.container-app {
+.container-dashboard {
   display: grid;
   height: 100vh;
-  grid-template-columns: 0.2fr 1fr;
+  grid-template-columns: 0.8fr 1fr 1fr 1fr;
   grid-template-rows: 0.2fr 3fr;
   grid-template-areas:
     "sidebar nav nav nav"

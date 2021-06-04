@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Route, Switch } from 'react-router-dom';
-import Navbar from "./components/dashboard/navbar/Navbar";
-import Sidebar from "./components/dashboard/sidebar/Sidebar";
-import Dashboard from "./components/dashboard/home/Home"
-import Users from "./components/dashboard/users/Users";
-import Login from './components/login/Login';
+import { Route, Switch } from "react-router-dom";
 import video from './assets/video_bg.mp4';
+
+import Navbar from "./components/dashboard/Navbar";
+import Sidebar from "./components/dashboard/Sidebar";
+import Dashboard from "./components/dashboard/Home";
+import Users from "./components/dashboard/Users";
+import Signin from "./components/login/Signin";
 
 const App = () => {
   const [sidebarOpen, setsidebarOpen] = useState(false);
@@ -16,14 +17,38 @@ const App = () => {
     setsidebarOpen(false);
   };
   return (
-    <div className="container-app">
-      <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
-      <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
-        <Switch>
-          <Route path='/dashboard' exact component={Dashboard} />
-          <Route path='/users' exact component={Users} />
-          <Route path='/' exact component={Login} />
-        </Switch>
+    <div>
+            <video
+      autoPlay
+      loop
+      style={{
+        position: "fixed",
+        width: "100vw",
+        left: "50%",
+        top: "50%",
+        height: "100vh",
+        objectFit: "cover",
+        transform: "translate(-50%, -50%)",
+        zIndex: "-1",
+      }}
+    >
+      <source src={video} type="video/mp4" />
+    </video>
+      <Switch>
+        <Route path="/" exact>
+          <div className="container-login">
+            <div className="wrapper">
+              <Signin />
+            </div>
+          </div>
+        </Route>
+        <div className="container-dashboard">
+          <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+          <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+          <Route path="/dashboard" exact component={Dashboard} />
+          <Route path="/users" exact component={Users} />
+        </div>
+      </Switch>
     </div>
   );
 };

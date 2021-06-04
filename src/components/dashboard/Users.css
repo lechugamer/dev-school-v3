@@ -1,0 +1,6 @@
+main {
+  background: rgb(255, 255, 255);
+  grid-area: main;
+  overflow-y: auto;
+  padding: 20px 35px;
+}
